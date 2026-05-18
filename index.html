@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a6f82" />
+    <meta
+      name="description"
+      content="Schede giornaliere per un viaggio in moto in Corsica con percorsi, spiagge e basi notte."
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Corsica Moto" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Corsica Moto Companion</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        class="hero__image"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Palombaggia%20Beach%2C%20Corsica%2C%20France%20(52724215610).jpg?width=1800"
+        alt="Costa turchese e pineta a Palombaggia in Corsica"
+      />
+      <div class="hero__shade"></div>
+      <div class="hero__content">
+        <p class="eyebrow">Corsica in moto | 24 luglio - 9 agosto 2026</p>
+        <h1>Compagno di viaggio Corsica</h1>
+        <p class="hero__copy">
+          17 schede giornaliere con percorso in moto, sosta mare e base notte,
+          pensate per alternare curve, paesi e spiagge raggiungibili senza
+          strappi inutili.
+        </p>
+        <div class="hero__stats" aria-label="Riepilogo viaggio">
+          <span id="trip-days">17 giorni</span>
+          <span id="trip-km">0 km stimati</span>
+          <span id="trip-status">Estate 2026</span>
+        </div>
+        <div class="pwa-panel" aria-live="polite">
+          <button id="install-app" class="install-button" type="button" hidden>
+            Installa app
+          </button>
+          <span id="offline-status">Preparazione offline...</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary-band" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Programma notti</p>
+          <h2 id="summary-title">Basi del soggiorno</h2>
+        </div>
+        <div class="stay-list" id="stay-list"></div>
+      </section>
+
+      <section class="toolbar" aria-label="Filtri schede">
+        <div class="filter-group" id="filter-group"></div>
+        <label class="search-field">
+          <span>Cerca</span>
+          <input
+            id="route-search"
+            type="search"
+            placeholder="spiaggia, paese, strada..."
+            autocomplete="off"
+          />
+        </label>
+      </section>
+
+      <section class="routes-band" aria-labelledby="routes-title">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Schede viaggio</p>
+            <h2 id="routes-title">Un percorso per ogni giorno</h2>
+          </div>
+          <p class="section-note">
+            Tempi e chilometri sono stime prudenziali: prima di partire controlla
+            vento, caldo, cantieri e pieno carburante.
+          </p>
+        </div>
+        <div class="route-grid" id="route-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>
+          Nessuna scheda corrisponde alla ricerca.
+        </p>
+      </section>
+
+      <section class="rider-band" aria-labelledby="rider-title">
+        <div class="section-heading">
+          <p class="eyebrow">Promemoria moto</p>
+          <h2 id="rider-title">Note pratiche per luglio e agosto</h2>
+        </div>
+        <div class="rider-notes">
+          <p>
+            Parti presto nei giorni lunghi, soprattutto Piana, Cap Corse,
+            Bavella e Castagniccia: nelle ore centrali traffico e caldo
+            cambiano il ritmo della giornata.
+          </p>
+          <p>
+            Porta acqua separata dal bagaglio, costume già accessibile, scarpe
+            leggere per gli accessi a piedi e un piano B costiero quando il
+            vento rende scomoda la spiaggia scelta.
+          </p>
+          <p>
+            Le spiagge più belle hanno spesso parcheggi piccoli o a pagamento:
+            con la moto arrivi meglio, ma resta essenziale non fermarsi su dune,
+            sentieri o accessi di servizio.
+          </p>
+        </div>
+      </section>
+
+      <section class="sources-band" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Fonti</p>
+          <h2 id="sources-title">Riferimenti usati</h2>
+        </div>
+        <div class="source-list" id="source-list"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

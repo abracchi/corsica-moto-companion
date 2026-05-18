@@ -1,0 +1,33 @@
+{
+  "name": "Corsica Moto Companion",
+  "short_name": "Corsica Moto",
+  "description": "Schede giornaliere per un viaggio in moto in Corsica con percorsi, spiagge e basi notte.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbfaf6",
+  "theme_color": "#0a6f82",
+  "categories": ["travel", "navigation", "lifestyle"],
+  "lang": "it",
+  "icons": [
+    {
+      "src": "./assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
