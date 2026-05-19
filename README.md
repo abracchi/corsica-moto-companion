@@ -31,6 +31,7 @@ stessa Wi-Fi, ma non abilita il service worker su telefono perche non e HTTPS.
 ## Contenuti
 
 - 17 schede giornaliere, inclusa la mattina di rientro del 9 agosto.
+- Scheda del 24 luglio collegata al GPX TomTom porto di Bastia -> Residence Amaryllis.
 - Filtri per area: Bastia, Balagne, Ajaccio, Sud, Solenzara, Costa Verde.
 - Link diretti alle mappe con waypoint principali.
 - Fonti turistiche ufficiali e immagini da Wikimedia Commons.

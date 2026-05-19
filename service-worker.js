@@ -1,4 +1,4 @@
-const CACHE_NAME = "corsica-moto-v1";
+const CACHE_NAME = "corsica-moto-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -9,6 +9,7 @@ const APP_SHELL = [
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/icons/apple-touch-icon.png",
+  "./assets/gpx/24-arrivo-bastia-port-residence-amaryllis.gpx",
 ];
 
 self.addEventListener("install", (event) => {

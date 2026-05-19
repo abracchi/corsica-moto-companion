@@ -148,34 +148,31 @@ const routes = [
     date: "2026-07-24",
     area: "bastia",
     base: "Bastia / Cardo",
-    title: "Arrivo morbido tra Cardo, Pigno e Miomo",
+    title: "Arrivo dal porto di Bastia alla Residence Amaryllis",
     hotel: stays[0],
-    km: 48,
-    time: "1h30",
+    km: 2.6,
+    time: "15 min",
     level: "Facile",
-    beach: "Plage de Miomo",
+    beach: "Arinella dopo il check-in, opzionale",
     beachNote:
-      "Ghiaia, torre genovese e ristoranti sul mare: e una sosta vicina per entrare nel ritmo senza bruciare energie il primo giorno.",
+      "Il GPX allegato copre solo il trasferimento porto-residenza. Se resta tempo, Arinella e la spiaggia piu semplice da raggiungere da Bastia.",
     waypoints: [
-      "Cardo",
-      "Col de Teghime",
-      "Serra di Pigno",
-      "Vieux Port di Bastia",
-      "Plage de Miomo",
-      "Erbalunga",
-      "Cardo",
+      "Bastia Port",
+      "Uscita dal porto",
+      "Attraversamento di Bastia",
+      "Salita verso Cardo",
+      "Residence Amaryllis",
     ],
     mapPoints: [
-      "Residence Amaryllis LD Tegghiale Cardo France",
-      "Col de Teghime Haute-Corse",
-      "Serra di Pigno Bastia",
-      "Vieux Port Bastia",
-      "Plage de Miomo Santa-Maria-di-Lota",
-      "Erbalunga Brando",
-      "Residence Amaryllis LD Tegghiale Cardo France",
+      "42.701307,9.453594",
+      "42.708594,9.438932",
     ],
+    gpx: {
+      url: "./assets/gpx/24-arrivo-bastia-port-residence-amaryllis.gpx",
+      points: 169,
+    },
     note:
-      "Il Pigno regala subito il colpo d'occhio su Bastia e Cap Corse. Tieni la parte mare per il tardo pomeriggio, quando la luce su Miomo e Erbalunga diventa più gentile.",
+      "Scheda sostituita con il tracciato TomTom del file GPX: e un arrivo pratico dal porto alla base, ideale con bagagli e tempi di sbarco da assorbire.",
     image: images.capCorse,
     sourceKeys: ["bastiaBeaches"],
   },
@@ -858,9 +855,9 @@ async function registerServiceWorker() {
 function renderStats() {
   const totalKm = routes.reduce((sum, route) => sum + route.km, 0);
   document.querySelector("#trip-days").textContent = `${routes.length} giorni`;
-  document.querySelector("#trip-km").textContent = `${totalKm.toLocaleString(
-    "it-IT",
-  )} km stimati`;
+  document.querySelector("#trip-km").textContent = `${Math.round(
+    totalKm,
+  ).toLocaleString("it-IT")} km stimati`;
   document.querySelector("#trip-status").textContent = getTripStatus();
 }
 
@@ -957,6 +954,11 @@ function renderRouteCard(route, index) {
         <div class="metrics">
           <span class="metric"><strong>${route.km} km</strong>giro stimato</span>
           <span class="metric"><strong>${route.time}</strong>in sella + soste</span>
+          ${
+            route.gpx
+              ? `<span class="metric"><strong>${route.gpx.points}</strong>punti GPX</span>`
+              : ""
+          }
         </div>
         <div class="beach-box">
           <span>Sosta mare</span>
@@ -979,6 +981,11 @@ function renderRouteCard(route, index) {
           >
             Fonte spiaggia
           </a>
+          ${
+            route.gpx
+              ? `<a class="button button--ghost" href="${route.gpx.url}" download>Scarica GPX</a>`
+              : ""
+          }
         </div>
       </div>
     </article>
