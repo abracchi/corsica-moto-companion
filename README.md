@@ -35,4 +35,5 @@ stessa Wi-Fi, ma non abilita il service worker su telefono perche non e HTTPS.
 - Schede dal 25 luglio al 7 agosto collegate ai rispettivi GPX TomTom originali.
 - Filtri per area: Bastia, Balagne, Ajaccio, Sud, Solenzara, Costa Verde.
 - Link diretti alle mappe con waypoint principali.
+- Schede italiane locali per le fonti turistiche collegate dalle route card.
 - Fonti turistiche ufficiali e immagini da Wikimedia Commons.

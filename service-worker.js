@@ -1,4 +1,4 @@
-const CACHE_NAME = "corsica-moto-v3";
+const CACHE_NAME = "corsica-moto-v4";
 const APP_SHELL = [
   "./",
   "./index.html",

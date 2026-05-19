@@ -53,6 +53,165 @@ const sources = {
   },
 };
 
+const sourceGuides = {
+  bastiaBeaches: {
+    title: "Spiagge intorno a Bastia",
+    intro:
+      "Il litorale del Paese Bastiese alterna spiagge sabbiose, calette di ciottoli e tratti piu naturali. Per il viaggio sono particolarmente utili Arinella, Ficaghjola e Miomo.",
+    points: [
+      "Arinella e la spiaggia piu grande di Bastia: sabbia, parcheggi ampi, servizi, docce, aree gioco e sorveglianza estiva.",
+      "Ficaghjola e una piccola cala urbana di ciottoli a sud del centro, comoda a piedi ma con parcheggio limitato in stagione.",
+      "Miomo si trova pochi chilometri a nord, ha ciottoli, torre genovese e locali sul mare: buona per una pausa breve lungo la strada del Cap Corse.",
+    ],
+    practical:
+      "Per un bagno rapido scegli Arinella; per restare vicino al centro valuta Ficaghjola; per un aperitivo sul mare punta Miomo.",
+  },
+  capCorse: {
+    title: "Cap Corse: Nonza, Centuri e Tamarone",
+    intro:
+      "Il Cap Corse concentra mare, villaggi, porticcioli e montagne in uno spazio compatto. Le strade sono spettacolari, ma richiedono ritmo lento e soste frequenti.",
+    points: [
+      "Nonza merita una pausa per il borgo, la torre e la vista sulla grande spiaggia scura sotto il paese.",
+      "Centuri e un piccolo porto noto per l'atmosfera tranquilla e per i ristoranti legati alla pesca locale.",
+      "Tamarone, sul versante orientale vicino a Macinaggio, e una spiaggia sabbiosa accessibile dalla zona del campeggio U Stazzu.",
+    ],
+    practical:
+      "Giornata da partire presto: parcheggi piccoli, curve lente e luce bellissima al rientro lungo la costa.",
+  },
+  ostriconi: {
+    title: "Plage de l'Ostriconi",
+    intro:
+      "L'Ostriconi e una spiaggia selvaggia a circa 15 km da L'Ile-Rousse verso Bastia, ai margini del Desert des Agriates.",
+    points: [
+      "Si raggiunge a piedi da un sentiero che parte dalla vecchia strada principale.",
+      "La spiaggia si trova alla foce del fiume Ostriconi, in un paesaggio rimasto naturale e lontano dall'urbanizzazione.",
+      "In estate e sorvegliata; con vento forte il mare puo diventare pericoloso, quindi conviene seguire le indicazioni del posto di soccorso.",
+    ],
+    practical:
+      "Porta scarpe leggere e non scegliere questa spiaggia se il vento rende l'onda troppo forte.",
+  },
+  bodri: {
+    title: "Plage Bodri",
+    intro:
+      "Bodri si trova a circa 1 km da L'Ile-Rousse in direzione Calvi. E una spiaggia chiara, molto frequentata in piena estate e piu calma fuori stagione.",
+    points: [
+      "L'accesso avviene dalla strada nazionale con due parcheggi a pagamento e un sentiero di circa 400 metri.",
+      "Si puo arrivare anche con il trenino della Balagne scendendo alla prima fermata dopo L'Ile-Rousse.",
+      "Bodri e la vicina Ghjunchitu sono curate e sorvegliate in stagione; con vento diventano interessanti per kitesurf e windsurf, ma la balneazione richiede prudenza.",
+    ],
+    practical:
+      "Non camminare lungo la ferrovia: usa il sentiero segnalato dai parcheggi o dalla fermata del trenino.",
+  },
+  balagne: {
+    title: "La Balagne",
+    intro:
+      "La Balagne e il territorio di Calvi, L'Ile-Rousse e dei villaggi in balcone: mare, montagne, uliveti, artigianato e paesi storici.",
+    points: [
+      "Calvi offre una spiaggia lunga, porto, marina e cittadella; L'Ile-Rousse ruota attorno alla Pietra, alle spiagge chiare e al mercato coperto.",
+      "Allontanandosi dal mare compaiono villaggi come Pigna, Corbara e Sant'Antonino, ideali per giri lenti e soste panoramiche.",
+      "La zona e nota come il giardino della Corsica per oliveti, mandorli, agrumi e piccoli produttori.",
+    ],
+    practical:
+      "In moto funziona bene come giornata a tappe corte: paesi al mattino, spiaggia nel tardo pomeriggio.",
+  },
+  ajaccio: {
+    title: "Il territorio di Ajaccio",
+    intro:
+      "Ajaccio unisce citta imperiale, porto, mercato, route des Sanguinaires e spiagge del golfo.",
+    points: [
+      "La citta e legata a Napoleone, al vecchio porto, al mercato coperto e ai piccoli ristoranti del centro.",
+      "La route des Sanguinaires porta verso Marinella, Barbicaja e altri lidi cittadini; poco oltre resta Capo di Feno, piu aperta e selvaggia.",
+      "Il golfo, piu riparato dai venti violenti, e adatto ad attivita nautiche leggere come paddle e kayak.",
+    ],
+    practical:
+      "Per il tramonto punta la Parata e le Sanguinaires; per un bagno semplice scegli una spiaggia lungo la route des Sanguinaires.",
+  },
+  pianottoli: {
+    title: "Pianottoli-Caldarello e le sue spiagge",
+    intro:
+      "Pianottoli-Caldarello ha circa 15 km di costa con spiagge, cale e pinete dal carattere ancora selvaggio.",
+    points: [
+      "Tra le spiagge citate: la Tour, Saint-Jean, Chevanu, Arbitro e i Bruzzi.",
+      "Le spiagge fanno parte della Riserva naturale delle Bocche di Bonifacio, area con forte protezione ambientale.",
+      "La posidonia, la grande nacchera, alcune stelle marine e piante delle dune sono specie da rispettare; l'ancoraggio va fatto sulla sabbia e non sulla posidonia.",
+    ],
+    practical:
+      "Restare sui sentieri, evitare dune e zone protette, e tenere conto che i cani non sono ammessi sulle spiagge indicate dal comune.",
+  },
+  sperone: {
+    title: "Spiagge di Sperone",
+    intro:
+      "Le spiagge di Petit e Grand Sperone si raggiungono dalla baia di Piantarella, vicino a Bonifacio.",
+    points: [
+      "Sono due spiagge naturali e protette lungo il golfo di Sperone.",
+      "Il paesaggio e quello da cartolina: sabbia fine, acqua turchese e contesto selvaggio.",
+      "L'accesso richiede un tratto a piedi, quindi conviene arrivare leggeri e con scarpe adatte.",
+    ],
+    practical:
+      "Lascia tempo per camminare da Piantarella e proteggi casco/giacca: in alta stagione la zona si riempie presto.",
+  },
+  palombaggia: {
+    title: "Palombaggia e i Pini",
+    intro:
+      "La plage d'i Pini, nella penisola di Palombaggia, e una delle immagini simbolo del sud della Corsica.",
+    points: [
+      "Acque basse, sabbia fine e colori molto chiari la rendono adatta anche a pause rilassate.",
+      "La zona guarda verso le isole Cerbicale e alterna dune, pini marittimi, rocce rosa, macchia e calette.",
+      "L'accesso stradale avviene a sud di Porto-Vecchio, dalla RN198 verso Palombaggia/Piccovaggia.",
+    ],
+    practical:
+      "In estate arriva presto o usala come sosta breve: parcheggi e traffico possono cambiare molto i tempi.",
+  },
+  solenzara: {
+    title: "Sari-Solenzara",
+    intro:
+      "Sari-Solenzara combina porto, mare, fiume, colline e accesso alla montagna del sud-est corso.",
+    points: [
+      "Solenzara e conosciuta per il porto turistico, le feste e gli eventi nautici tra primavera e autunno.",
+      "Il fiume Solenzara offre rapide e piscine naturali con acqua limpida.",
+      "Canella ha sabbia fine e fondali bassi; piu a sud la costa alterna piccole cale e spiagge selvagge.",
+    ],
+    practical:
+      "Perfetta come base mista: mare facile a Canella o Fautea, fresco nell'interno verso Bavella.",
+  },
+  bavella: {
+    title: "Corsica in bici: anello Solenzara-Bavella",
+    intro:
+      "La fonte descrive la Corsica come destinazione cicloturistica e propone, tra gli altri, un anello da Solenzara verso Bavella e l'Alta Rocca.",
+    points: [
+      "L'anello Solenzara-Bavella e indicato come percorso sportivo, circa 140 km e oltre 2.000 m di dislivello.",
+      "La salita attraversa paesaggi di pini larici, querce, castagni e arriva verso le Aiguilles de Bavella.",
+      "Il rientro passa dall'Ospedale e scende verso la costa, con Fautea come bella sosta mare.",
+    ],
+    practical:
+      "In moto resta una giornata di montagna: parti presto, porta acqua e valuta meteo/vento prima di salire.",
+  },
+  castagniccia: {
+    title: "Castagniccia Mare e Monti",
+    intro:
+      "Castagniccia Mare e Monti e un territorio fra costa e montagna, con Costa Verde, Cervione, Casinca e paesi storici.",
+    points: [
+      "La parte costiera conta circa 26 km di litorale e una quindicina di spiagge sabbiose facilmente accessibili.",
+      "L'interno custodisce villaggi, conventi, chiese, case in pietra, fontane e panorami verso la pianura e l'arcipelago toscano.",
+      "Tra le idee citate: museo etnografico di Cervione, cascata dell'Ucelluline, San Petrone, acqua d'Orezza, nocciola di Cervione e castagna corsa.",
+    ],
+    practical:
+      "Strade interne lente e strette: meglio alternare Castagniccia al mattino e bagno sulla Costa Verde nel pomeriggio.",
+  },
+  restonica: {
+    title: "Valle della Restonica",
+    intro:
+      "La Restonica, vicino a Corte, e un sito classificato dal 1966 e uno dei luoghi forti del centro della Corsica.",
+    points: [
+      "La RD623 e una strada stretta e tortuosa di circa 16 km che termina alle Bergeries de Grotelle.",
+      "Il paesaggio combina pini larici, acque limpide, profumo di montagna, pareti di arrampicata e accessi verso laghi come Melu e Capitellu.",
+      "La valle e oggetto di gestione specifica per proteggere il sito e controllare la frequentazione turistica.",
+    ],
+    practical:
+      "Entra presto, guida con pazienza e non trasformare la visita in una giornata troppo carica se fa caldo.",
+  },
+};
+
 const images = {
   capCorse: {
     url: "https://commons.wikimedia.org/wiki/Special:FilePath/Plage%20de%20Nonza%202021%20(further%20away).jpg?width=1200",
@@ -1128,7 +1287,11 @@ function renderRoutes() {
 }
 
 function renderRouteCard(route, index) {
-  const source = sources[route.sourceKeys[0]];
+  const sourceKey = route.sourceKeys[0];
+  const source = sources[sourceKey];
+  const sourceGuide = sourceGuides[sourceKey];
+  const sourceHref = sourceGuide ? `#fonte-${sourceKey}` : source.url;
+  const sourceAttrs = sourceGuide ? "" : 'target="_blank" rel="noreferrer"';
   const mapUrl = buildMapUrl(route.mapPoints);
   const date = formatter.format(new Date(`${route.date}T12:00:00`));
 
@@ -1174,11 +1337,10 @@ function renderRouteCard(route, index) {
           </a>
           <a
             class="button button--ghost"
-            href="${source.url}"
-            target="_blank"
-            rel="noreferrer"
+            href="${sourceHref}"
+            ${sourceAttrs}
           >
-            Fonte spiaggia
+            Fonte in italiano
           </a>
           ${
             route.gpx
@@ -1195,15 +1357,44 @@ function renderSources() {
   const usedKeys = new Set(routes.flatMap((route) => route.sourceKeys));
 
   sourceList.innerHTML = [...usedKeys]
-    .map((key) => sources[key])
-    .filter(Boolean)
-    .map(
-      (source) => `
-        <a class="source-pill" href="${source.url}" target="_blank" rel="noreferrer">
-          ${source.label}
-        </a>
-      `,
-    )
+    .map((key) => {
+      const source = sources[key];
+      const guide = sourceGuides[key];
+
+      if (!source) {
+        return "";
+      }
+
+      if (!guide) {
+        return `
+          <a class="source-pill" href="${source.url}" target="_blank" rel="noreferrer">
+            ${source.label}
+          </a>
+        `;
+      }
+
+      return `
+        <article class="source-card" id="fonte-${key}">
+          <div>
+            <p class="source-card__label">Fonte in italiano</p>
+            <h3>${guide.title}</h3>
+          </div>
+          <p>${guide.intro}</p>
+          <ul>
+            ${guide.points.map((point) => `<li>${point}</li>`).join("")}
+          </ul>
+          <p class="source-card__practical">${guide.practical}</p>
+          <a
+            class="button button--ghost"
+            href="${source.url}"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Apri originale
+          </a>
+        </article>
+      `;
+    })
     .join("");
 }
 
