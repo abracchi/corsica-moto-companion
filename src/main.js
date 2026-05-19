@@ -749,6 +749,170 @@ const routes = [
   },
 ];
 
+const gpxRouteOverrides = {
+  "2026-07-25": {
+    name: "25 - Dito Est",
+    title: "Percorso GPX - 25 - Dito Est",
+    file: "./assets/gpx/25-dito-est.gpx",
+    km: 38.3,
+    time: "1h10",
+    points: 1870,
+    mapPoints: [
+      "42.708594,9.438932",
+      "42.752777,9.465161",
+      "42.773713,9.474610",
+      "42.836040,9.481674",
+      "42.871578,9.477777",
+      "42.955756,9.452934",
+    ],
+  },
+  "2026-07-26": {
+    name: "26 luglio",
+    title: "Percorso GPX - 26 luglio",
+    file: "./assets/gpx/26-luglio.gpx",
+    km: 79.0,
+    time: "2h20",
+    points: 4117,
+    mapPoints: [
+      "42.708594,9.438932",
+      "42.784939,9.344861",
+      "42.797099,9.345590",
+      "42.844574,9.482537",
+    ],
+  },
+  "2026-07-27": {
+    name: "27 - luglio",
+    title: "Percorso GPX - 27 luglio",
+    file: "./assets/gpx/27-luglio.gpx",
+    km: 68.2,
+    time: "2h05",
+    points: 3050,
+    mapPoints: ["42.707800,9.438300", "42.633846,8.940296"],
+  },
+  "2026-07-28": {
+    name: "28 - luglio",
+    title: "Percorso GPX - 28 luglio",
+    file: "./assets/gpx/28-luglio.gpx",
+    km: 30.5,
+    time: "1h35",
+    points: 1177,
+    mapPoints: [
+      "42.632400,8.940800",
+      "42.627264,8.905860",
+      "42.602989,8.826711",
+      "42.566906,8.757314",
+    ],
+  },
+  "2026-07-30": {
+    name: "30 luglio",
+    title: "Percorso GPX - 30 luglio",
+    file: "./assets/gpx/30-luglio.gpx",
+    km: 143.0,
+    time: "3h55",
+    points: 4631,
+    mapPoints: ["42.632400,8.940800", "41.925301,8.714120"],
+  },
+  "2026-07-31": {
+    name: "31 luglio",
+    title: "Percorso GPX - 31 luglio",
+    file: "./assets/gpx/31-luglio.gpx",
+    km: 25.2,
+    time: "1h20",
+    points: 1246,
+    mapPoints: [
+      "41.925301,8.714120",
+      "41.927175,8.622859",
+      "41.895410,8.608480",
+      "41.910010,8.645040",
+      "41.909200,8.689500",
+    ],
+  },
+  "2026-08-01": {
+    name: "1 agosto",
+    title: "Percorso GPX - 1 agosto",
+    file: "./assets/gpx/1-agosto.gpx",
+    km: 104.5,
+    time: "2h50",
+    points: 4538,
+    mapPoints: ["41.924958,8.713457", "41.493700,9.051600"],
+  },
+  "2026-08-02": {
+    name: "2 agosto",
+    title: "Percorso GPX - 2 agosto",
+    file: "./assets/gpx/2-agosto.gpx",
+    km: 138.6,
+    time: "3h50",
+    points: 5769,
+    mapPoints: [
+      "41.493700,9.051600",
+      "41.711692,8.799882",
+      "41.629658,8.814900",
+      "41.495929,8.934958",
+    ],
+  },
+  "2026-08-03": {
+    name: "3 agosto",
+    title: "Percorso GPX - 3 agosto",
+    file: "./assets/gpx/3-agosto.gpx",
+    km: 77.9,
+    time: "2h20",
+    points: 2258,
+    mapPoints: [
+      "41.493700,9.051600",
+      "41.531200,9.273800",
+      "41.857900,9.401300",
+    ],
+  },
+  "2026-08-04": {
+    name: "4 agosto",
+    title: "Percorso GPX - 4 agosto",
+    file: "./assets/gpx/4-agosto.gpx",
+    km: 22.0,
+    time: "1h10",
+    points: 1087,
+    mapPoints: ["41.857900,9.401300", "41.823400,9.254800"],
+  },
+  "2026-08-05": {
+    name: "5 agosto",
+    title: "Percorso GPX - 5 agosto",
+    file: "./assets/gpx/5-agosto.gpx",
+    km: 64.3,
+    time: "1h55",
+    points: 1176,
+    mapPoints: ["41.857900,9.401300", "42.330793,9.491696"],
+  },
+  "2026-08-06": {
+    name: "6 agosto",
+    title: "Percorso GPX - 6 agosto",
+    file: "./assets/gpx/6-agosto.gpx",
+    km: 110.5,
+    time: "3h00",
+    points: 4626,
+    mapPoints: [
+      "42.331737,9.491217",
+      "42.279616,9.412339",
+      "42.236014,9.328331",
+      "42.323845,9.544296",
+    ],
+  },
+  "2026-08-07": {
+    name: "7 agosto",
+    title: "Percorso GPX - 7 agosto",
+    file: "./assets/gpx/7-agosto.gpx",
+    km: 11.5,
+    time: "40 min",
+    points: 728,
+    mapPoints: [
+      "42.330793,9.491696",
+      "42.345981,9.496895",
+      "42.365682,9.497205",
+      "42.374862,9.531027",
+    ],
+  },
+};
+
+applyGpxOverrides(routes);
+
 const filters = [
   { key: "all", label: "Tutto" },
   { key: "bastia", label: "Bastia" },
@@ -850,6 +1014,41 @@ async function registerServiceWorker() {
   } catch {
     offlineStatus.textContent = "Offline da verificare";
   }
+}
+
+function applyGpxOverrides(routeList) {
+  routeList.forEach((route) => {
+    const gpxRoute = gpxRouteOverrides[route.date];
+
+    if (!gpxRoute) {
+      return;
+    }
+
+    const [start, ...rest] = gpxRoute.mapPoints;
+    const end = rest.length > 0 ? rest[rest.length - 1] : start;
+    const intermediateCount = Math.max(0, gpxRoute.mapPoints.length - 2);
+
+    Object.assign(route, {
+      title: gpxRoute.title,
+      km: gpxRoute.km,
+      time: gpxRoute.time,
+      mapPoints: gpxRoute.mapPoints,
+      waypoints: [
+        `File GPX: ${gpxRoute.name}`,
+        `Partenza GPX: ${start}`,
+        intermediateCount > 0
+          ? `${intermediateCount} punti guida intermedi`
+          : "Traccia diretta dal file",
+        `Arrivo GPX: ${end}`,
+      ],
+      gpx: {
+        url: gpxRoute.file,
+        points: gpxRoute.points,
+        name: gpxRoute.name,
+      },
+      note: `Percorso sostituito con il tracciato GPX originale "${gpxRoute.name}". Il pulsante Apri mappa usa i punti guida del file; per la traccia precisa usa Scarica GPX.`,
+    });
+  });
 }
 
 function renderStats() {
